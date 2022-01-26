@@ -1,4 +1,4 @@
-@import url(font-awesome.min.css);
+@import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 /*
@@ -431,7 +431,7 @@ input, select, textarea {
 		}
 
 	select {
-		background-image: url("data:image/benjamin-voros-phIFdC6lA4E-unsplash width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23ffffff' /%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23ffffff' /%3E%3C/svg%3E");
 		background-size: 1.25rem;
 		background-repeat: no-repeat;
 		background-position: calc(100% - 1rem) center;
@@ -500,10 +500,14 @@ input, select, textarea {
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				display: inline-block;
 				font-style: normal;
-				font-weight: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
 				text-transform: none !important;
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
 			}
 
 			input[type="checkbox"] + label:before,
@@ -518,10 +522,10 @@ input, select, textarea {
 				display: inline-block;
 				height: 1.65rem;
 				left: 0;
-				line-height: calc(1.58125rem + 0em);
+				line-height: 1.65rem;
 				position: absolute;
 				text-align: center;
-				top: -0.125rem;
+				top: -0.15rem;
 				width: 1.65rem;
 			}
 
@@ -605,14 +609,30 @@ input, select, textarea {
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			display: inline-block;
 			font-style: normal;
-			font-weight: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
 			text-transform: none !important;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 400;
 		}
 
 		.icon > .label {
 			display: none;
+		}
+
+		.icon:before {
+			line-height: inherit;
+		}
+
+		.icon.solid:before {
+			font-weight: 900;
+		}
+
+		.icon.brands:before {
+			font-family: 'Font Awesome 5 Brands';
 		}
 
 /* Image */
@@ -1120,9 +1140,9 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto, 256px 256px;
+			background-position: center, center;
+			background-repeat: no-repeat, repeat;
 			z-index: 2;
 		}
 
